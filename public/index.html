@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Node.js App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 2em;
+      animation: slideIn 1s ease-in-out;
+    }
+    p {
+      color: #666;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      color: #fff;
+      background: #ff7e5f;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.3s;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .button:hover {
+      background: #feb47b;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    #message {
+      display: none;
+      color: #28a745;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to My Node.js App!</h1>
+    <p>Deploying a Node.js application on AWS EC2 instance.</p>
+    <a href="#" class="button" id="learn-more-button">Learn More</a>
+    <div id="message">Successfully deployed your application!</div>
+  </div>
+  <script>
+    document.getElementById('learn-more-button').addEventListener('click', function(event) {
+      event.preventDefault();
+      document.getElementById('message').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
